@@ -93,4 +93,10 @@ type UserType = {
         City: "Y Sadar"
     }
 }
-console.log(user3);
+// console.log(user3);
+
+//! Function with Type Alias
+
+type AddFunc = (num1:number, num2:number) => number;
+const addNum : AddFunc =(num1, num2) => num1 + num2;
+
