@@ -1,4 +1,4 @@
-// Generics
+// "Generics"
 
 type GenericsArray<T> = Array<T>;
 
@@ -18,3 +18,15 @@ const isAlligable: GenericsArray<boolean> = [true, false, true];
 type Coordinates<X, Y> = [X, Y]
 const coordinates1: Coordinates<number, number> = [20, 30]
 const coordinates2: Coordinates<string, string> = ['20', '30']
+
+
+const userList: GenericsArray<{
+    name: string,
+    age: number
+}> = [{
+    name: "Arafat",
+    age: 24
+}, {
+    name: "Rafi",
+    age: 25,
+}]
