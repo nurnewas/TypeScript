@@ -24,3 +24,5 @@ const myFriends: string[] = ["Arafat", "Rafi", "Shuvo", "Sakib", "Rony"];
 
 const [,myBestFriends] = myFriends;
 console.log(myBestFriends);
+
+
