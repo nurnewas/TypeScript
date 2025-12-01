@@ -39,14 +39,20 @@ const name2 = user["name"]; // bracket notation
 // console.log(name1, name2);
 
 
-//? Using with out keyof with Generics
+//? Using with out keyof 
 // const getPropertyFromObject = (obj: User, key: "id" | "name" | "address") => {
 //     return obj[key]
 // }
-//? Using keyof with Generics
-const getPropertyFromObject = (obj: User, key: keyof User) => {
+//? Using keyof with 
+// const getPropertyFromObject = (obj: User, key: keyof User) => {
+//     return obj[key]
+// }
+//  keyof constraint with generics
+const getPropertyFromObject = <X>(obj: X, key: keyof X) => {
     return obj[key]
 }
+
+
 
 const result = getPropertyFromObject(user, "name");
 console.log(result);
