@@ -1,16 +1,17 @@
 //? OOP => class ==> Object 
 
-class Animal {
-    name: string;
-    species: string;
-    sound: string;
 
-    constructor(name: string,
-        species: string,
-        sound: string,) {
-        this.name = name
-        this.species = species
-        this.sound = sound
+class Animal {
+       // name: string; //? remove this using public 
+    // species: string;
+    // sound: string;
+
+    constructor(public name: string,
+        public species: string,
+        public sound: string,) {
+        // this.name = name //? type script automatic iniseal this for using public
+        // this.species = species
+        // this.sound = sound
     }
 
     makeSound() {
