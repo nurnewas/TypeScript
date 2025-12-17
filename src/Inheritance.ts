@@ -1,10 +1,5 @@
 // parent class  
-class Common {
-
-}
-
-
-class Student {
+class Person {
     constructor(
         public name: string,
         public age: number,
@@ -17,23 +12,24 @@ class Student {
     }
 }
 
+
+class Student extends Person {
+
+}
+
 const student1 = new Student("Mr. rafi", 18, "Dhaka");
 student1.getSleep(10)
 
 
 // teacher 
-class Teacher {
-    constructor(
-        public name: string, // common property 
-        public age: number,// common property 
-        public address: string,// common property 
+class Teacher extends Person {
+    constructor(name: string, age: number, address: string,
         public post: string,// own property
     ) {
+        super(name, age, address)
+        // this.post = post
     }
 
-    getSleep(numOfHour: number) { // common methord
-        console.log(`${this.name}boka cela ${numOfHour} ghonta ghumai `);
-    }
 
     takeClass(classTaken: number) { //own methord
         console.log(`${this.name} sir Class nan ${classTaken} class per day `);
